@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title></title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assignment.css">
+    </head>
+    <body>
+		<div class="container">
+        <form id="myForm">
+		<h1>My Form</h1>
+			<div class="form-group">
+				<label for="inputAddress" class="col-form-label mandatory">All fields are mandatory.</label>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-12">
+					<label for="firstName">First Name: </label>
+					<input type="text" class="form-control" id="firstName" name="firstName" maxlength="40" onkeyup="alphaValidation(this,'firstNameValid')"/>
+					<label class="mandatory displayNone" id="firstNameValid" ></label>
+				</div>
+			</div>
+			<div class="form-group col-md-12">
+				<label for="lastName">Last Name: </label>
+				<input type="text" class="form-control" id="lastName" name="lastName" maxlength="40" onkeyup="alphaValidation(this,'lastNameValid')"/>
+				<label class="mandatory displayNone" id="lastNameValid" ></label>
+			</div>
+			<div class="form-group col-md-12">
+				<label for="phoneNumber">Phone Number: </label>
+				<input type="text" class="form-control" id="phoneNumber" name="phoneNumber"  onkeyup="phoneValidation(this,'phoneNumValid')"/>
+				<label class="mandatory displayNone" id="phoneNumValid" ></label>
+			</div>
+			<div class="form-group col-md-12">
+				<label for="email">Email: </label>
+				<input type="text" class="form-control" id="email" name="email" onblur="emailValidation(this,'emailValid')"/>
+				<label class="mandatory displayNone" id="emailValid"></label>
+			</div>
+			<div class="form-group">
+				<label for="inputAddress" class="col-form-label">Address</label>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+				  <label for="streetNumber" class="col-form-label">Street number</label>
+				  <input type="text" class="form-control" id="streetNumber">
+				</div>
+				<div class="form-group col-md-6">
+				  <label for="streetName" class="col-form-label">Street name</label>
+				  <input type="text" class="form-control" id="streetName">
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+				  <label for="inputCity" class="col-form-label">City</label>
+				  <input type="text" class="form-control" id="inputCity">
+				</div>
+				<div class="form-group col-md-4">
+				  <label for="inputState" class="col-form-label">State</label>
+				  <input type="text" class="form-control" id="inputState">
+				</div>
+				<div class="form-group col-md-2">
+				  <label for="inputZip" class="col-form-label">Zip</label>
+				  <input type="text" class="form-control" id="inputZip">
+				</div>
+			</div>
+			<div class="form-group col-md-12 mT10">
+				<input type="submit" class="btn btn-primary" value="Submit" />
+			</div>
+        </form>
+	</div>
+	</body>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assignment.js"></script>
+</html>

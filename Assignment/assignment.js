@@ -27,9 +27,10 @@ $(document).ready(function(){
 	
 	function phoneValidation(id, errorId){
 		var thisId= $(id).attr('id');
-		var reg = /^[0-9-()]+$/;
+		//var reg = /^[0-9-()]+$/;
+		var reg = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/;
 		var phoneVal = $("#"+thisId).val();
-		if((!reg.test(phoneVal))){
+		if(!reg.test(phoneVal)){
 			$("#"+thisId).val("");
 			$("#"+errorId).html("Invalid phone number").show().fadeOut(2000);
 		}
